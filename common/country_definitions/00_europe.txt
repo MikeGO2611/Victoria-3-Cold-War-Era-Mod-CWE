@@ -169,6 +169,7 @@ SWI = {
 	
 	capital = STATE_WEST_SWITZERLAND
 	cultures = { swiss }
+	religion = protestant
 }
 
 BEL = {
@@ -331,6 +332,17 @@ DEN = {
 	capital = STATE_ZEALAND
 }
 
+FAR = {
+	color = { 135 206 250 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { danish }
+	capital = STATE_ICELAND
+}
+
 GRL = {
 	color = { 165 77 179 }
 	
@@ -385,6 +397,29 @@ SAR = {
 	
 	cultures = { german north_german south_german french }
 	capital = STATE_RHINELAND
+}
+
+IAR = {
+	color = { 49 79 79 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { german north_german south_german french }
+	capital = STATE_NORTH_RHINE
+}
+
+RHE = {
+	color = { 5 85 5 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { north_german }
+	capital = STATE_NORTH_RHINE
+	is_named_from_capital = yes
 }
 
 EGR = {
@@ -708,7 +743,7 @@ SOV = {
 
 	tier = empire	
 	
-	cultures = { soviet russian }
+	cultures = { soviet russian byelorussian georgian ukrainian }
 	capital = STATE_MOSCOW
 }
 

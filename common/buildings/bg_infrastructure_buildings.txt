@@ -23,7 +23,7 @@ building_roadway = {
 			is_subsidized = yes
 		}
 		state.market_access < 1
-		owner.construction_queue_duration < max_autoexpand_queue_weeks
+		NOT = { is_under_construction = yes }
 	}
 	
 }
@@ -53,7 +53,7 @@ building_railway = {
 			is_subsidized = yes
 		}
 		state.market_access < 1
-		owner.construction_queue_duration < max_autoexpand_queue_weeks
+		NOT = { is_under_construction = yes }
 	}
 	
 }
@@ -374,5 +374,10 @@ building_skyscraper = {
 				is_treaty_port = yes 
 			}
 		}
+	}
+	
+	should_auto_expand = { 
+		cash_reserves_ratio > 0.5
+		NOT = { is_under_construction = yes }
 	}
 }

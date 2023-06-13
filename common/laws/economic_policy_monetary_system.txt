@@ -3,7 +3,7 @@
 law_gold_standard = {
 	group = lawgroup_monetary_system
 	
-	icon = "gfx/interface/icons/law_icons/gold_standard.dds"
+	icon = "gfx/interface/icons/law_icons/consumption_based_taxation.dds"
 	
 	modifier = {
 		
@@ -15,12 +15,25 @@ law_gold_standard = {
 		law_fiat_standard
 	}
 	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+	
 }
 
 law_semi_gold_standard = {
 	group = lawgroup_monetary_system
 	
-	icon = "gfx/interface/icons/law_icons/semi_gold_standard.dds"
+	icon = "gfx/interface/icons/law_icons/consumption_based_taxation.dds"
 	
 	modifier = {
 		country_minting_mult = 0.25
@@ -33,12 +46,25 @@ law_semi_gold_standard = {
 		law_fiat_standard
 	}
 	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+	
 }
 
 law_fiat_standard = {
 	group = lawgroup_monetary_system
 	
-	icon = "gfx/interface/icons/law_icons/law_fiat_standard.dds"
+	icon = "gfx/interface/icons/law_icons/consumption_based_taxation.dds"
 	
 	modifier = {
 		country_minting_mult = 0.50
@@ -49,6 +75,19 @@ law_fiat_standard = {
 		law_gold_standard
 		law_semi_gold_standard
 		#law_fiat_standard
+	}
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
 	}
 	
 }

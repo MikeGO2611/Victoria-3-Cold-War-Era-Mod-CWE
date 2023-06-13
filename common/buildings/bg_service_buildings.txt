@@ -121,7 +121,7 @@ building_security_services_industry = {
 
 building_recreational_services_industry = { 
 	building_group = bg_service
-	texture = "gfx/interface/icons/building_icons/humanities_research_facility.dds"
+	texture = "gfx/interface/icons/building_icons/placeholder.dds"
 	
 	unlocking_technologies = {
 		tech_services_1
@@ -231,6 +231,14 @@ building_financial_services_industry = {
 			}
 		}
 	}
+	
+	should_auto_expand = { 
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		NOT = { is_under_construction = yes }
+	}
 }
 
 building_banking_sector = {
@@ -262,6 +270,14 @@ building_banking_sector = {
 				is_treaty_port = yes 
 			}
 		}
+	}
+	
+	should_auto_expand = { 
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		NOT = { is_under_construction = yes }
 	}
 }
 

@@ -703,7 +703,7 @@
 	s:STATE_SOMALILAND = {
 		region_state:GBR = {
 			create_pop = {
-				culture = somali
+				culture = somalilander
 				size = 450777
 			}
 			create_pop = {
@@ -711,7 +711,7 @@
 				size = 138388
 			}
 		}
-		region_state:GBR = {
+		region_state:SOM = {
 			create_pop = {
 				culture = somali
 				size = 969032
@@ -927,27 +927,49 @@
 				size = 3166
 			}
 		}
+		region_state:GBR = {
+			create_pop = {
+				culture = ambazonian
+				size = 796764
+			}
+			create_pop = {
+				culture = ambazonian
+				size = 186669
+			}
+			create_pop = {
+				culture = ambazonian
+				size = 417483
+			}
+			create_pop = {
+				culture = ambazonian
+				size = 132423
+			}
+			create_pop = {
+				culture = ambazonian
+				size = 238322
+			}
+		}
 	}
 	s:STATE_SOUTH_CAMEROON = {
 		region_state:GBR = {
 			create_pop = {
-				culture = ambazonia
+				culture = ambazonian
 				size = 796764
 			}
 			create_pop = {
-				culture = ambazonia
+				culture = ambazonian
 				size = 186669
 			}
 			create_pop = {
-				culture = ambazonia
+				culture = ambazonian
 				size = 417483
 			}
 			create_pop = {
-				culture = ambazonia
+				culture = ambazonian
 				size = 132423
 			}
 			create_pop = {
-				culture = ambazonia
+				culture = ambazonian
 				size = 238322
 			}
 		}

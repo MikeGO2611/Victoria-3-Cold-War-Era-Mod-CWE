@@ -1,6 +1,6 @@
 law_politicised_judiciary = {
 	group = lawgroup_judiciary
-	icon = "gfx/interface/icons/law_icons/politicised_judiciary.dds"
+	icon = "gfx/interface/icons/law_icons/presidential_republic.dds"
 	
 	modifier = {
 	
@@ -15,6 +15,7 @@ law_politicised_judiciary = {
 		
 		#More influential bureaucrats
 		interest_group_ig_bureaucrats_pol_str_mult = 0.20
+		country_bureaucrats_pol_str_mult = 0.20
 		
 	}
 	
@@ -24,12 +25,26 @@ law_politicised_judiciary = {
 		#law_politicised_judiciary
 		law_partially_politicised_judiciary
 		law_independent_judiciary
-	}	
+	}
+
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+	
 }
 
 law_partially_politicised_judiciary = {
 	group = lawgroup_judiciary
-	icon = "gfx/interface/icons/law_icons/partially_politicised_judiciary.dds"
+	icon = "gfx/interface/icons/law_icons/presidential_republic.dds"
 	
 	modifier = {
 	
@@ -43,7 +58,8 @@ law_partially_politicised_judiciary = {
 		country_decree_cost_mult = -0.25
 		
 		#More influential bureaucrats
-		interest_group_ig_bureaucrats_pol_str_mult = 0.20
+		interest_group_ig_bureaucrats_pol_str_mult = 0.10
+		country_bureaucrats_pol_str_mult = 0.10
 	}
 	
 	progressiveness = 0
@@ -53,11 +69,25 @@ law_partially_politicised_judiciary = {
 		#law_partially_politicised_judiciary
 		law_independent_judiciary
 	}	
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+	
 }
 
 law_independent_judiciary = {
 	group = lawgroup_judiciary
-	icon = "gfx/interface/icons/law_icons/independent_judiciary.dds"
+	icon = "gfx/interface/icons/law_icons/presidential_republic.dds"
 	
 	modifier = {
 		
@@ -70,4 +100,18 @@ law_independent_judiciary = {
 		law_partially_politicised_judiciary
 		#law_independent_judiciary
 	}
+	
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
+		if = {
+			limit = { 
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+                scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+	
 }

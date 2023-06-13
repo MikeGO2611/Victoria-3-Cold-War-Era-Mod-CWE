@@ -6,7 +6,7 @@ TUR = {
 	tier = empire
 	
 	cultures = { turkish }
-	capital = STATE_EASTERN_THRACE
+	capital = STATE_ANKARA
 }
 
 UAE = {
@@ -40,7 +40,7 @@ ARF = {
 	
 	tier = empire
 	
-	cultures = { pan_arab mashriqi bedouin }
+	cultures = { pan_arab iraqi jordanian }
 	capital = STATE_BAGHDAD
 }
 
@@ -153,7 +153,7 @@ SYR = {
 }
 
 JOR = {
-	color = { 0 100 0 }
+	color = { 1 100 1 }
 	
 	country_type = recognized
 	

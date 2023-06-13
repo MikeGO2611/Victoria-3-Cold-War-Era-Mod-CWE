@@ -15,7 +15,7 @@ ALG = {
 	
 	country_type = recognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { algerian }
 	capital = STATE_LOWER_EGYPT
@@ -29,7 +29,7 @@ UAR = {
 	
 	tier = empire
 	
-	cultures = { pan_arab }
+	cultures = { pan_arab egyptian syrian }
 	capital = STATE_LOWER_EGYPT
 }
 
@@ -725,7 +725,7 @@ SAF = {
 	tier = kingdom
 	
 	cultures = { boer british }
-	capital = STATE_CAPE_COLONY
+	capital = STATE_TRANSVAAL
 }
 
 #South Africa Normal
@@ -855,5 +855,29 @@ SEY = {
 	tier = principality
 	
 	cultures = { seychellois }
+	capital = STATE_INDIAN_OCEAN_TERRITORY
+}
+
+# Mauritius
+MRT = {
+	color = { 175 163 220 }
+	
+	country_type = recognized
+	
+	tier = principality
+	
+	cultures = { mauritian }
+	capital = STATE_INDIAN_OCEAN_TERRITORY
+}
+
+# Comoros
+COM = {
+	color = { 197 254 1 }
+	
+	country_type = recognized
+	
+	tier = principality
+	
+	cultures = { comorian }
 	capital = STATE_INDIAN_OCEAN_TERRITORY
 }

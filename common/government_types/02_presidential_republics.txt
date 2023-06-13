@@ -26,6 +26,10 @@ gov_presidential_dictatorship = {
 			is_subject_type = subject_type_special_administrative_region
 		}
 	}
+	
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
 }
 
 gov_presidential_regime = { #Presidential Regime
@@ -55,6 +59,10 @@ gov_presidential_regime = { #Presidential Regime
 			is_subject_type = subject_type_special_administrative_region
 		}
 	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
 }
 
 gov_presidential_democracy = { #Presidential Republic
@@ -80,6 +88,10 @@ gov_presidential_democracy = { #Presidential Republic
 			#is_subject_type = subject_type_mandate
 			is_subject_type = subject_type_special_administrative_region
 		}
+	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
 	}
 }
 
@@ -107,6 +119,10 @@ gov_semi_presidential_democracy = { #Semi-Presidential Republic
 			is_subject_type = subject_type_special_administrative_region
 		}
 	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
 }
 
 #### Militaristic Regimes ####
@@ -131,6 +147,10 @@ gov_nationalist_dictatorship = { #Nationalist Dictatorship
 			is_subject_type = subject_type_special_administrative_region
 		}
 	}
+	
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
 }
 
 gov_nationalist_regime = { #Nationalist Regime
@@ -154,6 +174,10 @@ gov_nationalist_regime = { #Nationalist Regime
 			is_subject_type = subject_type_special_administrative_region
 		}
 	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
 }
 
 #### Colonial Governments ####
@@ -167,14 +191,18 @@ gov_colonial_administration_dictatorial = {
 	possible = {
 		
 		#Applies to all colonies
-		OR = {
-			is_subject_type = subject_type_semi_autonomous_colony
-			#is_subject_type = subject_type_mandate
+		is_subject_type = subject_type_semi_autonomous_colony
+		
+		#Legislature is not fully elected
+		OR = { 
+			has_law = law_type:law_appointed_legislature
+			has_law = law_type:law_technocratic_legislature
 		}
 		
-		#Legislature is not elected
-		has_law = law_type:law_appointed_legislature
-		
+	}
+	
+	on_government_type_change = {
+		change_to_dictatorial = yes
 	}
 }
 
@@ -188,17 +216,15 @@ gov_colonial_administration_elective = {
 	possible = {
 		
 		#Applies to all colonies
-		OR = {
-			is_subject_type = subject_type_semi_autonomous_colony
-			#is_subject_type = subject_type_mandate
-		}
+		is_subject_type = subject_type_semi_autonomous_colony
 		
 		#Legislature is somewhat elected
-		OR = { 
-			has_law = law_type:law_technocratic_legislature
-			has_law = law_type:law_democratic_legislature
-		}
+		has_law = law_type:law_democratic_legislature
 		
+	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
 	}
 }
 
@@ -218,6 +244,10 @@ gov_devolved_administration_dictatorship = {
 		#Legislature is not elected
 		has_law = law_type:law_appointed_legislature
 		
+	}
+	
+	on_government_type_change = {
+		change_to_dictatorial = yes
 	}
 }
 
@@ -239,5 +269,9 @@ gov_devolved_administration_elective = {
 			has_law = law_type:law_democratic_legislature
 		}
 		
+	}
+	
+	on_government_type_change = {
+		change_to_presidential_elective = yes
 	}
 }

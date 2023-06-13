@@ -18,7 +18,7 @@ super_power = {
 	
 	enforce_subject_rank_check = yes
 	
-	diplo_pact_cost = 2.5
+	diplo_pact_cost = 2.0
 	
 	prestige_average_threshold = 10.0
 	prestige_relative_threshold = 0.75
@@ -31,10 +31,11 @@ super_power = {
 	}
 	
 	modifier = {
-		country_influence_add = 2000
+		country_influence_add = 4000
 		country_diplomatic_play_maneuvers_add = 200
 		country_max_declared_interests_add = 10
 		country_loan_interest_rate_mult = -0.75
+		country_agitator_slots_add = 4
 	}
 }
 
@@ -44,7 +45,7 @@ great_power = {
 	
 	enforce_subject_rank_check = yes
 	
-	diplo_pact_cost = 2.0
+	diplo_pact_cost = 1.5
 	
 	prestige_average_threshold = 5.0
 	prestige_relative_threshold = 0.75
@@ -57,10 +58,11 @@ great_power = {
 	}
 	
 	modifier = {
-		country_influence_add = 1000
+		country_influence_add = 2000
 		country_diplomatic_play_maneuvers_add = 100
 		country_max_declared_interests_add = 5
 		country_loan_interest_rate_mult = -0.5
+		country_agitator_slots_add = 3
 	}
 }
 
@@ -70,7 +72,7 @@ major_power = {
 	
 	enforce_subject_rank_check = yes
 	
-	diplo_pact_cost = 1.5
+	diplo_pact_cost = 1.25
 	
 	prestige_average_threshold = 2.5
 	prestige_relative_threshold = 0.5
@@ -83,10 +85,11 @@ major_power = {
 	}
 	
 	modifier = {
-		country_influence_add = 750
+		country_influence_add = 1000
 		country_diplomatic_play_maneuvers_add = 75
 		country_max_declared_interests_add = 3
 		country_loan_interest_rate_mult = -0.25
+		country_agitator_slots_add = 2
 	}
 }
 
@@ -104,15 +107,16 @@ minor_power = {
 	}
 	
 	modifier = {
-		country_influence_add = 600
+		country_influence_add = 500
 		country_diplomatic_play_maneuvers_add = 60
 		country_max_declared_interests_add = 1
+		country_agitator_slots_add = 1
 	}
 }
 
 insignificant_power = {
 	rank_value = 2
-	icon_index = 1
+	icon_index = 5
 
 	infamy_aggressor_scaling = -0.10
 	infamy_target_scaling = -0.10
@@ -154,6 +158,7 @@ unrecognized_major_power = {
 		country_max_declared_interests_add = 2
 		country_tech_spread_mult = -0.15
 		country_loan_interest_rate_mult = 0.5
+		country_agitator_slots_add = 2
 	}
 }
 
@@ -181,13 +186,14 @@ unrecognized_regional_power = {
 		country_max_declared_interests_add = 1
 		country_tech_spread_mult = -0.20
 		country_loan_interest_rate_mult = 0.75
+		country_agitator_slots_add = 1
 	}
 }
 
 
 unrecognized_power = {
 	rank_value = 1
-	icon_index = 1
+	icon_index = 5
 
 	diplo_pact_cost = 0.5
 	

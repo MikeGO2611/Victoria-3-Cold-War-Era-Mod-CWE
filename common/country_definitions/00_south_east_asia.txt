@@ -28,7 +28,7 @@ SVM = {
 	tier = principality
 	
 	cultures = { vietnamese }
-	capital = STATE_ANNAM
+	capital = STATE_MEKONG
 }
 
 LAO = {
@@ -72,7 +72,7 @@ BUR = {
 	tier = kingdom
 	
 	cultures = { burmese }
-	capital = STATE_BURMA
+	capital = STATE_PEGU
 }
 
 KRN = { # Karen
@@ -524,6 +524,7 @@ AST = {
 	country_type = recognized
 	
 	tier = kingdom
+	religion = protestant
 	
 	capital = STATE_NEW_SOUTH_WALES
 	cultures = { australian }
@@ -535,6 +536,7 @@ NZL = {
 	country_type = recognized
 	
 	tier = principality
+	religion = protestant
 	
 	capital = STATE_NORTH_ISLAND
 	cultures = { new_zealander }

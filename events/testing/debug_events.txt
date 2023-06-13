@@ -1,0 +1,47 @@
+﻿namespace = debug
+
+debug.1 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		remove_variable = nato_application_var
+	}
+}
+debug.2 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+	
+		#Nuclear War system
+		set_global_variable = { 
+			name = nuclear_strike_power_global
+			value = 0
+		}
+		set_global_variable = { 
+			name = nuclear_strike_defence_global
+			value = 0
+		}
+	
+		c:USA = {
+		
+			#War
+			create_diplomatic_play = {
+				name = test_war
+				type = dp_annex_war
+				target_country = c:SOV
+			
+				war = yes
+			
+				add_war_goal = {
+					holder = c:SOV
+					type = annex_country
+					target_country = c:USA
+				}
+			
+			}
+			
+		}
+		
+	}
+	
+}

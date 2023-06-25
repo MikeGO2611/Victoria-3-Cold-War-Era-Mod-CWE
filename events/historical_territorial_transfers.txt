@@ -35,7 +35,7 @@ historical_territorial_transfers.1 = {
 		}
 		
 		ai_chance = { 
-			base = 90 
+			base = 100 
 		}
 		
     }
@@ -54,7 +54,7 @@ historical_territorial_transfers.1 = {
 		change_infamy = 10
 		
 		ai_chance = { 
-			base = 10 
+			base = 0 
 		}
 		
     }
@@ -157,7 +157,7 @@ historical_territorial_transfers.2 = {
 		
 			# Natives are angry!
 			every_scope_state = {
-				add_radicals = {
+				add_radicals_in_state = {
 					value = large_radicals
 				}
 				add_modifier = { name = nationalist_agitation months = 60 is_decaying = yes } 
@@ -328,7 +328,7 @@ historical_territorial_transfers.3 = {
 			limit = {
 		 		state_region = { is_homeland = cu:eritrean }	# Change homeland identity to match colony to be released ****
 		 	}
-			add_radicals = {
+			add_radicals_in_state = {
 				culture = cu:eritrean							# Change culture ****
 				value = large_radicals
 			}
@@ -383,6 +383,7 @@ historical_territorial_transfers.4 = {
 		}
 		
 		#Colony conditions
+		exists = c:TGZ
 		c:TGZ = { 												# Change TAG of the colony ****
 			is_direct_subject_of = ROOT
 			is_subject_type = subject_type_special_administrative_region
@@ -468,6 +469,7 @@ historical_territorial_transfers.5 = {
 		}
 		
 		#Colony conditions
+		exists = c:SAR
 		c:SAR = { 												# Change TAG of the transferee ****
 			is_direct_subject_of = ROOT
 			is_subject_type = subject_type_mandate
@@ -553,6 +555,7 @@ historical_territorial_transfers.6 = {
 		}
 		
 		#Colony conditions
+		exists = c:IAR
 		c:IAR = { 												# Change TAG of the transferee ****
 			is_direct_subject_of = ROOT
 			is_subject_type = subject_type_mandate
@@ -637,6 +640,7 @@ historical_territorial_transfers.7 = {
 		}
 		
 		#Colony conditions
+		exists = c:TRE
 		c:TRE = { 												# Change TAG of the transferee ****
 			is_direct_subject_of = ROOT
 			is_subject_type = subject_type_mandate
@@ -855,6 +859,7 @@ historical_territorial_transfers.9 = {
 		is_at_war = no											# war = no
 		
 		#Recipent conditions
+		exists = c:PNM
 		c:PNM = {
 			is_a_democracy = yes
 			is_sufficiently_independent = yes
@@ -1393,6 +1398,7 @@ historical_territorial_transfers.12 = {
 		}
 		
 		#Colony conditions
+		exists = c:WPA
 		c:WPA = { 												# Change TAG of the transferee ****
 			is_direct_subject_of = ROOT
 			is_subject_type = subject_type_mandate
@@ -1539,7 +1545,7 @@ historical_territorial_transfers.13 = {
 		# Natives are angry!
 		every_scope_state = {
 			limit = { is_homeland = cu:somalilander }
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 			}
 			add_modifier = { name = nationalist_agitation months = 60 is_decaying = yes } 
@@ -1643,7 +1649,7 @@ historical_territorial_transfers.14 = {
 		# Natives are angry!
 		every_scope_state = {
 			limit = { is_homeland = cu:japanese }
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 			}
 			add_modifier = { name = nationalist_agitation months = 60 is_decaying = yes } 
@@ -1755,7 +1761,7 @@ historical_territorial_transfers.15 = {
 		# Natives are angry!
 		every_scope_state = {
 			limit = { is_homeland = cu:ambazonian }
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 			}
 			add_modifier = { name = nationalist_agitation months = 60 is_decaying = yes } 
@@ -1862,7 +1868,7 @@ historical_territorial_transfers.16 = {
 		# Natives are angry!
 		every_scope_state = {
 			limit = { is_homeland = cu:indian }
-			add_radicals = {
+			add_radicals_in_state = {
 				value = large_radicals
 			}
 			add_modifier = { name = nationalist_agitation months = 60 is_decaying = yes } 

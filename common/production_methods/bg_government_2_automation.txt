@@ -17,31 +17,29 @@ pm_automation_1_building_government = {
 	pollution_generation = 1
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.1
+		workforce_scaled = {
+			country_bureaucracy_add = 10
 		}
-	}
+	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.1
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 10
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_telecommunications_add = 5
+			building_input_communication_services_add = 5
 			building_input_electricity_add = 5
 			building_input_intellectual_property_add = 1
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.05
-			building_employment_engineers_mult = -0.05
-			building_employment_clerks_mult = -0.05
+		level_scaled = {
+			building_employment_bureaucrats_add = -250
 		}
 		
 	}
@@ -58,31 +56,29 @@ pm_automation_2_building_government = {
 	pollution_generation = 2
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.2
+		workforce_scaled = {
+			country_bureaucracy_add = 20
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.2
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 20
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_telecommunications_add = 10
+			building_input_communication_services_add = 10
 			building_input_electricity_add = 10
 			building_input_intellectual_property_add = 2
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.10
-			building_employment_engineers_mult = -0.10
-			building_employment_clerks_mult = -0.10
+		level_scaled = {
+			building_employment_bureaucrats_add = -500
 		}
 		
 	}
@@ -99,31 +95,29 @@ pm_automation_3_building_government = {
 	pollution_generation = 3
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.3
+		workforce_scaled = {
+			country_bureaucracy_add = 30
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.3
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 30
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_telecommunications_add = 15
+			building_input_communication_services_add = 15
 			building_input_electricity_add = 15
 			building_input_intellectual_property_add = 3
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.15
-			building_employment_engineers_mult = -0.15
-			building_employment_clerks_mult = -0.15
+		level_scaled = {
+			building_employment_bureaucrats_add = -750
 		}
 		
 	}
@@ -140,31 +134,29 @@ pm_automation_4_building_government = {
 	pollution_generation = 4
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.4
+		workforce_scaled = {
+			country_bureaucracy_add = 40
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.4
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 40
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 20
+			building_input_communication_services_add = 20
 			building_input_electricity_add = 20
 			building_input_intellectual_property_add = 4
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.20
-			building_employment_engineers_mult = -0.20
-			building_employment_clerks_mult = -0.20
+		level_scaled = {
+			building_employment_bureaucrats_add = -1000
 		}
 		
 	}
@@ -181,31 +173,29 @@ pm_automation_5_building_government = {
 	pollution_generation = 5
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.50
+		workforce_scaled = {
+			country_bureaucracy_add = 50
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.50
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 50
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 25
+			building_input_communication_services_add = 25
 			building_input_electricity_add = 25
 			building_input_intellectual_property_add = 5
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.25
-			building_employment_engineers_mult = -0.25
-			building_employment_clerks_mult = -0.25
+		level_scaled = {
+			building_employment_bureaucrats_add = -1250
 		}
 		
 	}
@@ -222,31 +212,29 @@ pm_automation_6_building_government = {
 	pollution_generation = 6
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.60
+		workforce_scaled = {
+			country_bureaucracy_add = 60
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.60
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 60
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 30
+			building_input_communication_services_add = 30
 			building_input_electricity_add = 30
 			building_input_intellectual_property_add = 6
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.30
-			building_employment_engineers_mult = -0.30
-			building_employment_clerks_mult = -0.30
+		level_scaled = {
+			building_employment_bureaucrats_add = -1500
 		}
 		
 	}
@@ -263,31 +251,29 @@ pm_automation_7_building_government = {
 	pollution_generation = 7
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.70
+		workforce_scaled = {
+			country_bureaucracy_add = 70
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.70
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 70
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 35
+			building_input_communication_services_add = 35
 			building_input_electricity_add = 35
 			building_input_intellectual_property_add = 7
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.35
-			building_employment_engineers_mult = -0.35
-			building_employment_clerks_mult = -0.35
+		level_scaled = {
+			building_employment_bureaucrats_add = -1750
 		}
 		
 	}
@@ -304,31 +290,29 @@ pm_automation_8_building_government = {
 	pollution_generation = 8
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.80
+		workforce_scaled = {
+			country_bureaucracy_add = 80
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.80
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 80
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 40
+			building_input_communication_services_add = 40
 			building_input_electricity_add = 40
 			building_input_intellectual_property_add = 8
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.40
-			building_employment_engineers_mult = -0.40
-			building_employment_clerks_mult = -0.40
+		level_scaled = {
+			building_employment_bureaucrats_add = -2000
 		}
 		
 	}
@@ -345,31 +329,29 @@ pm_automation_9_building_government = {
 	pollution_generation = 9
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 0.90
+		workforce_scaled = {
+			country_bureaucracy_add = 90
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 0.90
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 90
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 45
+			building_input_communication_services_add = 45
 			building_input_electricity_add = 45
 			building_input_intellectual_property_add = 9
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.45
-			building_employment_engineers_mult = -0.45
-			building_employment_clerks_mult = -0.45
+		level_scaled = {
+			building_employment_bureaucrats_add = -2250
 		}
 		
 	}
@@ -386,31 +368,29 @@ pm_automation_10_building_government = {
 	pollution_generation = 10
 	
 	country_modifiers = {
-		unscaled = {
-			country_bureaucracy_mult = 1.00
+		workforce_scaled = {
+			country_bureaucracy_add = 100
 		}
 	}	
 	
 	state_modifiers = {
-		unscaled = {
-			state_tax_capacity_mult = 1.00
-		}
+		workforce_scaled = {
+			state_tax_capacity_add = 100
+		}		
 	}
 
 	building_modifiers = {
 	
 		#More electricity required
 		workforce_scaled = {
-			building_input_computers_add = 50
+			building_input_communication_services_add = 50
 			building_input_electricity_add = 50
 			building_input_intellectual_property_add = 10
 		}
 	
 		#Less employees required
-		unscaled = {
-			building_employment_capitalists_mult = -0.50
-			building_employment_engineers_mult = -0.50
-			building_employment_clerks_mult = -0.50
+		level_scaled = {
+			building_employment_bureaucrats_add = -2500
 		}
 		
 	}

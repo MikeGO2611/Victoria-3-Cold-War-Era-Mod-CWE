@@ -21,12 +21,6 @@ pm_hereditary_bureaucrats = {
 		law_professional_bureaucrats
 	}
 	
-	country_modifiers = {
-		unscaled = { 
-			interest_group_ig_landowners_pol_str_mult = 0.25
-		}
-	}
-	
 	building_modifiers = {
 		level_scaled = {
 			building_employment_bureaucrats_add = 1000
@@ -41,18 +35,12 @@ pm_religious_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	
 	unlocking_laws = {
-		law_HOS_religious_leader
+		law_HOS_religious_steeler
 	}
 	
 	disallowing_laws = {
 		law_total_separation
 		law_state_atheism
-	}
-	
-	country_modifiers = {
-		unscaled = { 
-			interest_group_ig_devout_pol_str_mult = 0.25
-		}
 	}
 	
 	building_modifiers = {
@@ -68,13 +56,7 @@ pm_military_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_military.dds"
 	
 	unlocking_laws = {
-		law_HOS_nationalist_leader
-	}
-	
-	country_modifiers = {
-		unscaled = { 
-			interest_group_ig_armed_forces_pol_str_mult = 0.25
-		}
+		law_HOS_nationalist_steeler
 	}
 	
 	building_modifiers = {

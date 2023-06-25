@@ -23,20 +23,27 @@
 		always = yes
 	}
 	
+	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_noblesse_oblige
 		ig_trait_family_ties
 		ig_trait_noble_privileges
 	}
 	
-	on_enable = {}
+	on_enable = {
+		ig:ig_landowners = {
+			set_ig_trait = ig_trait:ig_trait_noble_privileges
+			set_ig_trait = ig_trait:ig_trait_family_ties
+			set_ig_trait = ig_trait:ig_trait_noblesse_oblige
+		}
+	}
 	on_disable = {}
 	on_character_ig_membership = {}
 	
 	pop_potential = {
 	
 		#Only Accepted Pops can organise into IGs
-		pop_is_discriminated = no
+		#pop_is_discriminated = no
 		
 		#Only Landowners
 		is_pop_type = aristocrats

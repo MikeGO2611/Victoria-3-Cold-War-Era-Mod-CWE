@@ -50,7 +50,7 @@ bg_light_industry = {
 
 	lens = light_industry
 	
-	urbanization = 1
+	urbanization = 2
 	infrastructure_usage_per_level = 1
 }
 
@@ -59,7 +59,7 @@ bg_heavy_industry = {
 
 	lens = heavy_industry
 	
-	urbanization = 2
+	urbanization = 5
 	infrastructure_usage_per_level = 2
 }
 
@@ -215,13 +215,12 @@ bg_sugar_plantations = {
 bg_banana_plantations = {
 	parent_group = bg_agriculture
 	
-	default_building = building_fruit_plantation
+	default_building = building_banana_plantation
 }
 
 bg_whaling = {
-	parent_group = bg_agriculture
-
-	#capped_by_resources = yes
+	category = rural
+	capped_by_resources = yes
 	
 	economy_of_scale = yes
 	
@@ -240,9 +239,8 @@ bg_whaling = {
 }
 
 bg_fishing = {
-	parent_group = bg_agriculture
-
-	#capped_by_resources = yes
+	category = rural
+	capped_by_resources = yes
 	
 	economy_of_scale = yes
 	
@@ -533,7 +531,7 @@ bg_government = {
 	
 	lens = government
 	
-	urbanization = 5
+	urbanization = 1
 	infrastructure_usage_per_level = 1
 }
 
@@ -577,8 +575,6 @@ bg_nuclear_weapons = {
 
 	always_possible = yes
 	
-	is_military = yes
-	
 	is_government_funded = yes
 	
 	inheritable_construction = yes
@@ -605,7 +601,7 @@ bg_public_infrastructure = {
 	
 	is_government_funded = yes
 	
-	urbanization = 1
+	urbanization = 2
 }
 
 bg_private_infrastructure = {
@@ -616,7 +612,7 @@ bg_private_infrastructure = {
 	
 	cash_reserves_max = 25000
 	
-	urbanization = 1
+	urbanization = 2
 	
 	should_auto_expand = { 
 		default_auto_expand_rule = yes
@@ -666,13 +662,15 @@ bg_trade = {
 	
 	proportionality_limit = 1.0
 	
-	economy_of_scale = no
+	economy_of_scale = yes
+	
+	subsidized = yes
 	
 	default_building = building_trade_center
 	
 	cash_reserves_max = 5000	
 	
-	urbanization = 5
+	urbanization = 1
 	
 	infrastructure_usage_per_level = 0.1
 	

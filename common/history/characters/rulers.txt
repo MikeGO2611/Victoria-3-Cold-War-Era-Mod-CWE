@@ -15,6 +15,7 @@ CHARACTERS = {
 				direct
 				persistent
 			}
+			dna = dna_harry_truman
 		}
     }
 	
@@ -80,6 +81,7 @@ CHARACTERS = {
 				cautious
 				reserved
 			}
+			dna = dna_clement_attlee
 		}
 	}
 	c:FRA = {
@@ -95,6 +97,7 @@ CHARACTERS = {
 				bigoted
 				arrogant
 			}
+			dna = dna_vincent_jules_auriol
 		}
 	}
 	c:WGR = {
@@ -342,6 +345,7 @@ CHARACTERS = {
 				demagogue
 				wrathful
 			}
+			dna = dna_joseph_stalin
 		}
 	}
 	c:YUG = {
@@ -352,12 +356,13 @@ CHARACTERS = {
 			birth_date = 1892.5.7
 			interest_group = ig_rural_folk
 			ideology = ideology_autocratic
-			culture = cu:serb
+			culture = cu:yugoslavian
 			traits = {
 				charismatic
 				imperious
 				direct
 			}
+			dna = dna_josip_broz_tito
 		}
 	}
 	c:ALB = {
@@ -482,6 +487,7 @@ CHARACTERS = {
 				demagogue
 				reckless
 			}
+			dna = dna_mao_zedong
 		}
 	}
 	c:NKO = {
@@ -498,6 +504,7 @@ CHARACTERS = {
 				ambitious
 			}
 		}
+		dna = dna_kim_il_sung
 	}
 	c:NVM = {
 		create_character = {
@@ -513,6 +520,7 @@ CHARACTERS = {
 				reserved
 			}
 		}
+		dna = dna_ho_chin_minh
 	}
 	
 	c:ROC = {
@@ -545,6 +553,7 @@ CHARACTERS = {
 				cruel
 			}
 		}
+		dna = dna_syngman_rhee
 	}
 	c:JAP = {
 		create_character = {
@@ -552,7 +561,7 @@ CHARACTERS = {
 			last_name = "shigeru_yoshida_last_name"
 			ruler = yes ig_leader = yes historical = yes
 			birth_date = 1878.9.22
-			interest_group = ig_petty_bourgeoisie
+			interest_group = ig_landowners
 			ideology = ideology_democratic
 			traits = {
 				charismatic
@@ -1156,7 +1165,7 @@ CHARACTERS = {
 			last_name = "juan_peron_last_name"
 			ruler = yes ig_leader = yes historical = yes
 			birth_date = 1895.10.8
-			interest_group = ig_industrialists
+			interest_group = ig_rural_folk
 			ideology = ideology_autocratic 
 			#culture = cu:argentinian
 			traits = {

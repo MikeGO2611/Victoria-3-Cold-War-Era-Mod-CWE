@@ -115,8 +115,10 @@ CAM = { # Cambodia
 		
 		trigger = {
 			scope:actor = { 
-				has_law = law_type:law_HOS_president
-				has_law = law_type:law_HOS_nationalist_leader
+				OR = { 
+					has_law = law_type:law_HOS_president
+					has_law = law_type:law_HOS_nationalist_leader
+				}
 			}
 		}
 	}
@@ -253,7 +255,10 @@ ROC = { # China
 		
 		trigger = {
 			scope:actor = { 
-				has_law = law_type:law_HOS_president
+				OR = { 
+					has_law = law_type:law_HOS_president
+					is_a_nationalist_government = yes
+				}
 			}
 		}
 	}
@@ -446,7 +451,18 @@ RUS = { # Russia
 		priority = 0
 		
 		trigger = {
-			coa_def_communist_flag_trigger = yes
+			scope:actor = { has_government_type = gov_soviet_dictatorship }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_union_of_sovereign_states
+		adjective = dyn_c_soviet_union_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = { has_government_type = gov_soviet_republic }
 		}
 	}
 }
@@ -460,7 +476,41 @@ SOV = { # Russia
 		priority = 0
 		
 		trigger = {
-			coa_def_communist_flag_trigger = yes
+			scope:actor = { has_government_type = gov_soviet_dictatorship }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_union_of_sovereign_states
+		adjective = dyn_c_soviet_union_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = { has_government_type = gov_soviet_republic }
+		}
+	}
+}
+
+UAR = { # United Arab Republic
+	dynamic_country_name = {
+		name = dyn_c_united_arab_republic
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = { NOT = { is_a_monarchy = yes } }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_united_arab_kingdom
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = { is_a_monarchy = yes }
 		}
 	}
 }
@@ -520,6 +570,31 @@ TUR = { # Turkey
 		
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_turkiye
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			NOT = { coa_def_monarchy_flag_trigger = yes }
+			game_date > 2022.6.2
+		}
+	}
+}
+
+MCD = { # Macedonia
+	dynamic_country_name = {
+		name = dyn_c_north_macedonia
+		
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:GRE
+			game_date > 2019.2.1
 		}
 	}
 }
@@ -663,16 +738,14 @@ UAE = {
 		is_main_tag_only = yes
 		priority = 0
 		trigger = {
-			scope:actor = {
-				coa_def_independent_trigger = yes
-			}
+			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 	dynamic_country_name = {
 		name = dyn_c_trucial_states
 		adjective = dyn_c_trucial_states_adj
 		is_main_tag_only = yes
-		priority = 0
+		priority = 1
 		trigger = {
 			scope:actor = {
 				is_subject_of = c:GBR
@@ -701,7 +774,7 @@ CAR = {
 	dynamic_country_name = {
 		name = dyn_c_french_central_africa
 		is_main_tag_only = yes
-		priority = 0
+		priority = 2
 		trigger = {
 			scope:actor = {
 				is_subject_of = c:FRA
@@ -900,9 +973,7 @@ ESW = {
 		is_main_tag_only = yes
 		priority = 0
 		trigger = {
-			scope:actor = {
-				is_subject_of = c:GBR
-			}
+			game_date < 2018.4.19
 		}
 	}
 }

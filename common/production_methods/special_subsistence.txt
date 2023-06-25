@@ -10,23 +10,17 @@ default_building_subsistence_farms = {
 	
 	building_modifiers = {
 		workforce_scaled = { # 85
-			building_output_grain_add = 2.5 # 50
-			building_output_fruit_add = 1.5 # 45
-			building_output_fabric_add = 0.5 # 10
-			building_output_wood_add = 0.5 # 10
-			building_output_services_add = 0.5 # 15
-			building_output_illegal_services_add = 0.5
+			building_output_grain_add = 2 # 50
+			building_output_meat_add = 1 # 10
+			building_output_wood_add = 1 # 10
 			
-			building_output_tools_add = 0.5 # 15
+			building_output_services_add = 0.5 # 15
+			building_output_illegal_services_add = 1
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4750
-		}
-		
-		unscaled = {
-			building_aristocrats_shares_add = 5
-			building_clergymen_shares_add = 2
+			building_employment_peasants_add = 5000
+			#building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -34,25 +28,9 @@ default_building_subsistence_farms = {
 pm_home_workshops_no_building_subsistence_farms = {
 	texture = "gfx/interface/icons/production_method_icons/no_home_workshops.dds"
 	
-	unlocking_laws = {
-		law_command_economy law_semi_command_economy
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = { # 45
 		unscaled = {
-			building_output_grain_add = 1.25  # 25
-			building_output_fruit_add = 1.25 # 45
-			building_output_fabric_add = 0.5  # 10
-			building_output_wood_add = 0.5 # 10
-			building_output_illegal_services_add = 0.5
 			
-			building_output_tools_add = 0.5 # 15
 		}
 	}				
 }		
@@ -60,8 +38,8 @@ pm_home_workshops_no_building_subsistence_farms = {
 pm_home_workshops_building_subsistence_farms = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
 	
-	disallowing_laws = {
-		law_command_economy law_semi_command_economy
+	unlocking_technologies = {
+		tech_consumer_manufacturing_1
 	}
 	
 	country_modifiers = {
@@ -72,12 +50,7 @@ pm_home_workshops_building_subsistence_farms = {
 	
 	building_modifiers = {
 		workforce_scaled = { # 51
-			building_output_clothes_add = 0.5 # 15
-			building_output_furniture_add = 0.5 # 15
-			building_output_liquor_add = 0.7 # 21 
-			building_output_illegal_services_add = 0.5
-			
-			building_output_tools_add = 0.5 # 15
+			building_output_furniture_add = 1 # 15
 		}
 	}
 }
@@ -86,30 +59,21 @@ pm_home_workshops_building_subsistence_farms = {
 default_building_subsistence_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = {
 		workforce_scaled = { # 80
-			building_output_fruit_add = 1.5 # 45
-			building_output_fabric_add = 0.25 # 5
-			building_output_wood_add = 0.75 # 15
+			building_output_grain_add = 2 # 50
+			building_output_meat_add = 1 # 10
+			building_output_wood_add = 1 # 10
+			
 			building_output_services_add = 0.5 # 15
-			building_output_illegal_services_add = 0.5
+			building_output_illegal_services_add = 1
 			
 			building_output_tools_add = 0.5 # 15
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4750
-		}
-		
-		unscaled = {
-			building_aristocrats_shares_add = 5
-			building_clergymen_shares_add = 2
+			building_employment_peasants_add = 5000
+			#building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -117,22 +81,9 @@ default_building_subsistence_orchards = {
 pm_home_workshops_no_building_subsistence_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/no_home_workshops.dds"
 	
-	unlocking_laws = {
-		law_command_economy law_semi_command_economy
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = { # 45
 		unscaled = {
-			building_output_fruit_add = 0.83 # 25
-			building_output_fabric_add = 0.25 # 5
-			building_output_wood_add = 0.75 # 15
-			building_output_illegal_services_add = 0.5
+			
 		}
 	}					
 }		
@@ -140,22 +91,13 @@ pm_home_workshops_no_building_subsistence_orchards = {
 pm_home_workshops_building_subsistence_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
 	
-	disallowing_laws = {
-		law_command_economy law_semi_command_economy
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
+	unlocking_technologies = {
+		tech_consumer_manufacturing_1
 	}
 
 	building_modifiers = {
 		workforce_scaled = { # 51
-			building_output_clothes_add = 0.5 # 15
-			building_output_furniture_add = 0.5 # 15
-			building_output_liquor_add = 0.7 # 21
-			building_output_illegal_services_add = 0.5
+			building_output_furniture_add = 1 # 15
 		}
 	}
 }	
@@ -164,28 +106,19 @@ pm_home_workshops_building_subsistence_orchards = {
 default_building_subsistence_pastures = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = {
 		workforce_scaled = { # 80
-			building_output_meat_add = 1.5 # 45
-			building_output_fabric_add = 0.75 # 15
-			building_output_wood_add = 0.25 # 5
+			building_output_grain_add = 1 # 50
+			building_output_meat_add = 2 # 10
+			building_output_wood_add = 1 # 10
+			
 			building_output_services_add = 0.5 # 15
-			building_output_illegal_services_add = 0.5
+			building_output_illegal_services_add = 1
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 4750
-		}
-		
-		unscaled = {
-			building_aristocrats_shares_add = 5
-			building_clergymen_shares_add = 2
+			building_employment_peasants_add = 5000
+			#building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -193,22 +126,9 @@ default_building_subsistence_pastures = {
 pm_home_workshops_no_building_subsistence_pastures = {
 	texture = "gfx/interface/icons/production_method_icons/no_home_workshops.dds"
 	
-	unlocking_laws = {
-		law_command_economy law_semi_command_economy
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = {					
 		unscaled = { # 45
-			building_output_meat_add = 0.83 # 25
-			building_output_fabric_add = 0.75 # 15
-			building_output_wood_add = 0.25 # 5
-			building_output_illegal_services_add = 0.5
+			
 		}
 	}				
 }		
@@ -216,25 +136,18 @@ pm_home_workshops_no_building_subsistence_pastures = {
 pm_home_workshops_building_subsistence_pastures = {
 	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
 	
-	disallowing_laws = {
-		law_command_economy law_semi_command_economy
-	}
-	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
+	unlocking_technologies = {
+		tech_consumer_manufacturing_1
 	}
 	
 	building_modifiers = {
 		workforce_scaled = { # 51
-			building_output_clothes_add = 0.5 # 15
-			building_output_furniture_add = 0.5 # 15
-			building_output_liquor_add = 0.7 # 21
-			building_output_illegal_services_add = 0.5
+			building_output_furniture_add = 1 # 15
 		}
 	}
 }
+
+#### Ownership PMs ####
 
 # p = 0.0, e = 250, pe = 0.0
 pm_privately_owned_building_subsistence = {
@@ -244,19 +157,16 @@ pm_privately_owned_building_subsistence = {
 		law_command_economy law_semi_command_economy
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = { 
 		level_scaled = {
 			building_employment_clergymen_add = 150
 			building_employment_aristocrats_add = 100
 		}
 		unscaled = {
-			building_capitalists_shares_add = 5
+			building_aristocrats_shares_add = 3
+			building_clergymen_shares_add = 2
+			building_laborers_shares_add = 1
+			building_peasants_shares_add = 1
 		}
 	}
 }
@@ -269,19 +179,10 @@ pm_worker_cooperative_building_subsistence = {
 		law_command_economy law_semi_command_economy
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			#country_construction_add = 0.01
-		}
-	}
-	
 	building_modifiers = {
-		level_scaled = {
-			building_employment_peasants_add = 250
-		}
 		unscaled = {
 			building_laborers_shares_add = 1
-			building_machinists_shares_add = 1
+			building_peasants_shares_add = 1
 		}
 	}
 }

@@ -36,6 +36,8 @@
 		effect_starting_politics_trade_policy_free_trade = yes
 		effect_starting_politics_pro_nuclear_policy = yes
 		
+		effect_starting_politics_specialisation_manufacturing = yes
+		
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
 			level = 2
@@ -59,6 +61,9 @@
 		
 		#Extra prestige for winning WW2
 		add_modifier = { name = ww2_victor months = 60 is_decaying = yes }
+		
+		#Irish Open Border
+		set_variable = irish_open_border
 
 	}
 }

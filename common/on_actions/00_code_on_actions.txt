@@ -611,6 +611,28 @@ on_monthly_pulse_character = {
 			remove_trait = trait_child
 			add_random_trait = personality
 		}
+		if = {
+			limit = {
+				is_mobilized = yes
+			}
+			set_variable = {
+				name = num_months_mobilized
+				value = {
+					add = {
+						if = {
+							limit = {
+								exists = var:num_months_mobilized
+							}
+							add = var:num_months_mobilized
+						}
+						else = { # for safety
+							add = 0
+						}
+					}
+					add = 1
+				}
+			}
+		}
 	}
 }
 on_yearly_pulse_character = {
@@ -734,40 +756,22 @@ on_acquired_technology = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = grand_exhibition_points_change
-			}
-			change_variable = {
-				name = grand_exhibition_points_change
-				add = 3
-			}
-		}
-		if = {
-			limit = {
 				has_game_started = yes
 			}
 			post_notification = acquired_technology_notification
 		}
 		if = {
 			limit = {
-				has_technology_researched = socialism
-				NOT = { has_variable = socialism_researched }
-			}
-			set_variable = socialism_researched
-			ig:ig_trade_unions = {
-				add_ideology = ideology_socialist
-			}
-		}
-		if = {
-			limit = {
 				is_player = yes
-				has_technology_researched = pumpjacks
-				NOT = { has_variable = first_oil_discovered }
+				has_technology_researched = tech_mining_1
 			}
-			set_variable = first_oil_discovered
 			if = {
 				limit = {
 					any_scope_state = {
-						has_potential_resource = bg_oil_extraction
+						OR = { 
+							has_potential_resource = bg_oil_extraction
+							has_potential_resource = bg_natural_gas_extraction
+						}
 					}
 				}
 				random_scope_state = {
@@ -776,13 +780,22 @@ on_acquired_technology = {
 					}
 					force_resource_discovery = bg_oil_extraction
 				}
+				random_scope_state = {
+					limit = {
+						has_potential_resource = bg_natural_gas_extraction
+					}
+					force_resource_discovery = bg_natural_gas_extraction
+				}
 			}
 			else_if = {
 				limit = {
 					any_country = {
 						has_overlapping_interests = ROOT
 						any_scope_state = {
-							has_potential_resource = bg_oil_extraction
+							OR = { 
+								has_potential_resource = bg_oil_extraction
+								has_potential_resource = bg_natural_gas_extraction
+							}
 						}
 					}
 				}
@@ -790,7 +803,10 @@ on_acquired_technology = {
 					limit = {
 						has_overlapping_interests = ROOT
 						any_scope_state = {
-							has_potential_resource = bg_oil_extraction
+							OR = { 
+								has_potential_resource = bg_oil_extraction
+								has_potential_resource = bg_natural_gas_extraction
+							}
 						}
 					}
 					random_scope_state = {
@@ -798,6 +814,12 @@ on_acquired_technology = {
 							has_potential_resource = bg_oil_extraction
 						}
 						force_resource_discovery = bg_oil_extraction
+					}
+					random_scope_state = {
+						limit = {
+							has_potential_resource = bg_natural_gas_extraction
+						}
+						force_resource_discovery = bg_natural_gas_extraction
 					}
 				}
 			}
@@ -807,6 +829,12 @@ on_acquired_technology = {
 						has_potential_resource = bg_oil_extraction
 					}
 					force_resource_discovery = bg_oil_extraction
+				}
+				random_state = {
+					limit = {
+						has_potential_resource = bg_natural_gas_extraction
+					}
+					force_resource_discovery = bg_natural_gas_extraction
 				}
 			}
 		}
@@ -826,11 +854,44 @@ on_spreading_technology = {
 	}
 }
 
-# Fires for all countries with an interest marker in the play's region
-# Root = Country who owns the interest marker
-# scope:diplomatic_play = The diplomatic play that has been started
+# Fires when a diplomatic play is started
+# root = The diplomatic play that has been started
+# scope:initiator = Initiator of the play
+# scope:target = Target of the play
 on_diplomatic_play_started = {
-	events = {
+	effect = {
+		if = {
+			limit = { is_diplomatic_play_type = dp_unify_germany }
+			every_country = {
+				limit = {
+					is_supporting_unification_candidate = { who = scope:initiator country_formation = GER }
+				}
+				
+				scope:initiator = { annex = prev }
+			}
+		}
+		
+		if = {
+			limit = { is_diplomatic_play_type = dp_unify_italy }
+			every_country = {
+				limit = {
+					is_supporting_unification_candidate = { who = scope:initiator country_formation = ITA }
+				}
+				
+				scope:initiator = { annex = prev }
+			}
+		}
+
+		if = {
+			limit = { is_diplomatic_play_type = dp_unify_scandinavia }
+			every_country = {
+				limit = {
+					is_supporting_unification_candidate = { who = scope:initiator country_formation = SCA }
+				}
+				
+				scope:initiator = { annex = prev }
+			}
+		}		
 	}
 }
 
@@ -1559,6 +1620,23 @@ on_ally_capitulated_notification = {
 	}
 }
 
+# Root = Character
+on_mobilized_general = {
+	effect = {
+		set_variable = {
+			name = num_months_mobilized
+			value = 0
+		}
+	}
+}
+
+# Root = Character
+on_demobilized_general = {
+	effect = {
+		remove_variable = num_months_mobilized
+	}
+}
+
 # Root = Diplomatic Play
 on_diplo_play_start = {
 	effect = {
@@ -2131,81 +2209,10 @@ on_investment_decreased = {
 # scope:target = Uprising country
 on_revolution_start = {
 	effect = {
-		if = {
-			limit = {
-				has_law = law_type:law_HOS_monarch
-				scope:target = {
-					NOT = {
-						has_law = law_type:law_HOS_monarch
-					}
-				}
-			}
-			set_variable = anti_monarchist_revolution
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_warlord_china
-				NOT = { has_variable = china_warlord_explosion_revolution }
-			}
-			post_notification = warlord_china_explosion_point_add
-			change_variable = {
-				name = china_warlord_explosion
-				add = 1
-			}
-			set_variable = china_warlord_explosion_revolution
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_meiji_restoration
-				scope:target = {
-					ig:ig_landowners = {
-						is_in_government = yes
-					}
-				}
-			}
-			set_variable = anti_shogunate_civil_war
-		}
-		if = {
-			limit = {
-				has_journal_entry = je_the_paris_commune_france
-			}
-			c:FRA = {
-				trigger_event = { id = paris_commune.4 popup = yes }
-			}
-			random_scope_state = {
-				limit = {
-					state_region = s:STATE_ILE_DE_FRANCE
-				}
-				set_state_owner = c:PRC
-			}
-			c:PRC = {
-				annex = scope:target
-				create_diplomatic_play = {
-					type = dp_annex_war
-					target_state = c:FRA.capital
-					annex_as_civil_war = yes
-					add_war_goal = {
-						holder = c:FRA
-						type = annex_country
-						target_country = c:PRC
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_dlc_feature = voice_of_the_people_content
-				c:KRA ?= root
-				c:AUS ?= {
-					any_subject_or_below = {
-						c:KRA ?= this
-					}
-				}
-			}
-			c:AUS = {
-				trigger_event = { id = krakow.1 days = 3 popup = yes }
-			}
-		}
+		
+		
+		
+		
 	}
 }
 
@@ -2825,6 +2832,22 @@ on_new_culture_obsession = {
 on_rank_changed = {
 	effect = {
 		post_notification = rank_changed_notification
+	}
+}
+
+# Root = State Region
+# scope:actor = Claimant country
+# scope:region = State Region
+on_claim_added = {
+	effect = {
+		every_country = {
+			limit = {
+				any_state = {
+					state_region = root
+				}
+			}
+			post_notification = claim_added_notification
+		}
 	}
 }
 

@@ -58,12 +58,6 @@
 	}
 	c:USA = {
 		create_diplomatic_pact = {
-			country = c:SIR
-			type = protectorate
-		}
-	}
-	c:USA = {
-		create_diplomatic_pact = {
 			country = c:ICL
 			type = protectorate
 		}
@@ -259,6 +253,12 @@
 			type = protectorate
 		}
 	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:PER
+			type = satellite
+		}		
+	}
 	
 	#USSR
 	c:SOV = {
@@ -351,12 +351,6 @@
 	
 	c:GBR = {
 		create_diplomatic_pact = {
-			country = c:PER
-			type = protectorate
-		}		
-	}
-	c:GBR = {
-		create_diplomatic_pact = {
 			country = c:KUW
 			type = puppet
 		}		
@@ -441,12 +435,12 @@
 		}
 	}
 	
-	#c:GBR = {
-	#	create_diplomatic_pact = {
-	#		country = c:HND
-	#		type = protectorate
-	#	}
-	#}
+	c:GBR = {
+		create_diplomatic_pact = {
+			country = c:HND
+			type = personal_union
+		}
+	}
 	c:GBR = {
 		create_diplomatic_pact = {
 			country = c:PAK

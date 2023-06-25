@@ -96,7 +96,7 @@ RUS = {
 IRE = {
 	use_culture_states = yes
 
-	required_states_fraction = 0.75
+	required_states_fraction = 1
 	
 	ai_will_do = { always = yes }
 }
@@ -348,6 +348,14 @@ YEM = {
 	}
 
 	required_states_fraction = 0.75	
+	
+	ai_will_do = { always = yes }
+}
+
+CNG = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.90
 	
 	ai_will_do = { always = yes }
 }

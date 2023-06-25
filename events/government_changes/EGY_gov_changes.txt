@@ -79,14 +79,14 @@ EGY_gov_changes.1 = {
     }
 	
 	option = {
-        name = historical_interstate_wars.option.2				# Reject
+        name = historical_gov_changes.option.2				# Reject
 		default_option = yes
 		
 		#Major discontent
 		custom_tooltip = {
 			text = everyone_is_angry_custom_tooltip
 			every_scope_state = {
-				add_radicals = {
+				add_radicals_in_state = {
 					value = large_radicals
 				}
 			}

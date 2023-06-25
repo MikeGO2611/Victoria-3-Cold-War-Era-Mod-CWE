@@ -47,11 +47,32 @@
     UNSC_non_perm_membership.f:0 "A new country is selected to be a non permanent member of the UNSC whenever there are less than 15 UNSC members in the world while there are more than 30 UNGA members. Countries which are eligible are those with a reputable reputation, not at war and are members of the UNGA." 
     UNSC_non_perm_membership.option:0 "Excellent!"
     
-    UN_secretary_general_selection.t:0 "[SCOPE.sC('unsg_country').GetAdjectiveNoFormatting] UN Secretary-General"
-    UN_secretary_general_selection.d:0 "The United Nations General Assembly has elected a [SCOPE.sC('unsg_country').GetAdjectiveNoFormatting] national to be the organisation's Secretary-General. This gives our country more clout in international affairs."
+    UN_secretary_general_selection.t:0 "[SCOPE.sCountry('unsg_country').GetAdjective] UN Secretary-General"
+    UN_secretary_general_selection.d:0 "The United Nations General Assembly has elected a [SCOPE.sCountry('unsg_country').GetAdjective] national to be the organisation's Secretary-General. This gives our country more clout in international affairs."
     UN_secretary_general_selection.f:0 "[SCOPE.sCountry('unsg_country').GetNameNoFlag] was chosen because we have a Reputable international reputation and is not a Great Power. The UN Secretary-General's term in office is 5 years."
     
     unsg_country:0 "UN Secretary-General's Home Country"
+    
+    un_sanctions_1:0 "UN Diplomatic Sanctions"
+    un_sanctions_2:0 "UN Political Sanctions"
+    un_sanctions_3:0 "UN Economic Sanctions"
+    un_embargo_participant:0 "UN Economic Sanctions Participant"
+    
+    UN_sanctions_system.t:0 "Sanctions imposed on [SCOPE.sCountry('UN_sanctions_target').GetNameNoFlag]"
+    UN_sanctions_system.d:0 "The United Nations, on the urging of its Secretary-General, has resolved to impose sanctions on [SCOPE.sCountry('UN_sanctions_target').GetNameNoFlag] for the purpose of punishing the country for violating international law."
+    UN_sanctions_system.f:0 "The UN sanctions will remain active until [SCOPE.sCountry('UN_sanctions_target').GetNameNoFlag]'s infamy is reduced to 'reputable'. Some sanctions may however be lifted along the way if our country has a lower level of infamy."
+    UN_sanctions_option:0 "Express our strong displeasure at the UNGA."
+    
+    UN_sanctions_system_embargo.t:0 "UN calls for sanctions against [SCOPE.sCountry('un_sanctions_embargoed_country').GetNameNoFlag]"
+    UN_sanctions_system_embargo.d:0 "Due to the flagrant breaches of international law committed by [SCOPE.sCountry('un_sanctions_embargoed_country').GetNameNoFlag], the UN Secretary-General has called upon all UN General Assembly members to impose an embargo on the rogue state. Participation in the UN plan will yeld much international goodwill for [SCOPE.sCountry('un_sanctions_embargoing_country').GetNameNoFlag]"
+    UN_sanctions_system_embargo.f:0 "Note that the embargo against [SCOPE.sCountry('un_sanctions_embargoed_country').GetNameNoFlag] cannot be removed until the country has had its sanctions lifted by the UN."
+    UN_sanctions_system_embargo_option.1:0 "Begin the embargo!"
+    UN_sanctions_system_embargo_option.2:0 "No, we need to trade with them."
+    
+    UN_sanctions_system_end.t:0 "UN Sanctions Lifted"
+    UN_sanctions_system_end.d:0 "The UN Secretary-General has lifted some or all of the sanctions against [SCOPE.sCountry('UN_sanctions_target').GetNameNoFlag] due to our lower infamy."
+    UN_sanctions_system_end.f:0 "The various UN sanctions will be lifted according to the level of infamy that [SCOPE.sCountry('UN_sanctions_target').GetNameNoFlag] has."
+    UN_sanctions_end_option:0 "Great!"
     
     request_un_peacekeeping_decision:0 "Request for UN Peacekeeping"
     request_un_peacekeeping_decision_desc:0 "We can submit a resolution in the UN General Assembly calling for our enemies to cease their hostilities against us immediately or face the threat of collective action against them by the UN. Whether this is possible is however subject to the approval of the UN Security Council and General Assembly."
@@ -275,6 +296,31 @@
     ibero_american_organisation_expulsion.t:0 "Organisation of the Ibero-American States Membership Terminated"
     ibero_american_organisation_expulsion.d:0 "Our membership in the Organisation of Ibero-American States has been terminated with immediate effect. All benefits conferred as part of our treaties with the Organisation of Ibero-American States countries are thus hereby abrogated."
     ibero_american_organisation_expulsion.f:0 "This event fired because this country either became an insufficiently autonomous subject, became an ineligible government type or became an international pariah."
+    
+    arab_league_member:0 "Arab League Member"
+    arab_league_leader:0 "Arab League Leader"
+    form_arab_league_decision:0 "Form the Arab League"
+    form_arab_league_decision_desc:0 "The Arab League is a regional organisation in the Arab world, which is located in Northern Africa, Western Africa, Eastern Africa, and Western Asia. The League's main goal is to "draw closer the relations between member states and co-ordinate collaboration between them, to safeguard their independence and sovereignty, and to consider in a general way the affairs and interests of the Arab countries"."
+    join_arab_league_decision:0 "Join the Arab League"
+    join_arab_league_decision_desc:0 "The Arab League is a regional organisation in the Arab world, which is located in Northern Africa, Western Africa, Eastern Africa, and Western Asia. The League's main goal is to "draw closer the relations between member states and co-ordinate collaboration between them, to safeguard their independence and sovereignty, and to consider in a general way the affairs and interests of the Arab countries"."
+    leave_arab_league_decision:0 "Leave the Arab League"
+    leave_arab_league_decision_desc:0 "The Arab League is a regional organisation in the Arab world, which is located in Northern Africa, Western Africa, Eastern Africa, and Western Asia. The League's main goal is to "draw closer the relations between member states and co-ordinate collaboration between them, to safeguard their independence and sovereignty, and to consider in a general way the affairs and interests of the Arab countries"."
+    arab_league_application_var:0 "Recently applied for Arab League membership"
+    arab_league_application_choice.t:0 "[SCOPE.sCountry('arab_league_applicant').GetNameNoFlag] applies to join the Arab League"
+    arab_league_application_choice.d:0 "[SCOPE.sCountry('arab_league_applicant').GetNameNoFlag] has applied to join the Arab League. As [SCOPE.sCountry('arab_league_leader').GetNameNoFlag] currently holds the Chairmanship of Arab League, it is up to us to decide whether to admit [SCOPE.sCountry('arab_league_applicant').GetNameNoFlag] into the organisation."
+    arab_league_application_choice.option.1:0 "Accept"
+    arab_league_application_choice.option.2:0 "Reject"
+    arab_league_application_rejection.t:0 "Arab League Application Rejected"
+    arab_league_application_rejection.d:0 "The leader of Arab League, [SCOPE.sCountry('arab_league_leader').GetNameNoFlag], has rejected our humble request to join their great organisation. They cite geopolitical reasons for rejecting our membership."
+    arab_league_application_rejection.1:0 "They don't deserve us anyway!"
+    arab_league_application_acceptance.t:0 "Arab League Application Accepted"
+    arab_league_application_acceptance.d:0 "The leader of the Arab League, [SCOPE.sCountry('arab_league_leader').GetNameNoFlag], has kindly accepted our humble request to join their great organisation. They cite geopolitical reasons for accepting our membership."
+    arab_league_application_acceptance.1:0 "We thank them for their generosity!"
+    arab_league_application_var:0 "Recently applied for Arab League membership"
+    left_arab_league_var:0 "Recently left Arab League"
+    arab_league_expulsion.t:0 "Arab League Membership Terminated"
+    arab_league_expulsion.d:0 "Our membership in the Arab League has been terminated with immediate effect. All benefits conferred as part of our treaties with Arab League countries are thus hereby abrogated."
+    arab_league_expulsion.f:0 "This event fired because this country either became an insufficiently autonomous subject, became an ineligible government type or became an international pariah."
     
     COMECON_member:0 "COMECON Member"
     COMECON_leader:0 "COMECON Leader"
@@ -547,7 +593,7 @@
     portuguese_sao_tome.indy.t:0 "Independence of Sao Tome and Principe?"
     portuguese_sao_tome.indy.d:0 "Independence of Sao Tome and Principe DESC"
     portuguese_timor.indy.t:0 "Independence of East Timor?"
-    portuguese_timor.indy.d:0 "Independence of East Timor"
+    portuguese_timor.indy.d:0 "Independence of East Timor DESC"
     
     portuguese_decolonisation.option.1:0 "Let the colony be self-governing"
     portuguese_decolonisation.option.2:0 "They do not deserve any autonomy"
@@ -693,6 +739,8 @@
     malaysia_singapore.d:0 "Independence of Singapore DESC"
     CAF_rhodesia.t:0 "Dissolve the Federation of Rhodesia & Nyasaland?"
     CAF_rhodesia.d:0 "Dissolve the Federation of Rhodesia & Nyasaland DESC"
+    uar_syria.t:0 "Independence of Syria?"
+    uar_syria.d:0 "Independence of Syria DESC"
     
     historical_union_dissolution.option.1:0 "Grant them independence"
     historical_union_dissolution.option.2:0 "Our country cannot be fragmented!"
@@ -715,6 +763,12 @@
     falklands_war.d:0 "The Falklands War DESC"
     third_indo_pakistan_war.t:0 "The Third Indo-Pakistan War"
     third_indo_pakistan_war.d:0 "The Third Indo-Pakistan War DESC"
+    6_day_war.t:0 "The Arab-Israeli War"
+    6_day_war.d:0 "The Arab-Israeli War DESC"
+    ifni_war.t:0 "The Ifni War"
+    ifni_war.d:0 "The Ifni War DESC"
+    IDO_ETM_war.t:0 "The Invasion of East Timor"
+    IDO_ETM_war.d:0 "The Invasion of East Timor DESC"
     
     portugal_india_war:0 "Annexation of Goa"
     suez_crisis_war:0 "The Suez Crisis"
@@ -722,6 +776,9 @@
     second_indo_pakistan_war:0 "The Second Kashmir War"
     falklands_war:0 "The Falklands War"
     third_indo_pakistan_war:0 "The Third Indo-Pakistan War"
+    6_day_war:0 "The Arab-Israeli War"
+    ifni_war:0 "The Ifni War"
+    IDO_ETM_war:0 "The Invasion of East Timor"
     
     historical_interstate_wars.option.1:0 "Declare war!"
     historical_interstate_wars.option.2:0 "Peace is a more preferable choice."
@@ -753,10 +810,95 @@
     EGY_1952_revolution.t:0 "The July Revolution?"
     EGY_1952_revolution.d:0 "Egyptian Revolution of 1952 DESC"
     
-    stirrings_of_revolution:0 "Major Domestic Unrest"
+    CUB_1959_revolution.t:0 "The Cuban Revolution?"
+    CUB_1959_revolution.d:0 "The Cuban Revolution?"
     
-    historical_gov_changes.option.1:0 "Accept our destiny!"
+    RHO_UDI_1965.t:0 "Unilateral Declaration of Independence?"
+    RHO_UDI_1965.d:0 "Unilateral Declaration of Independence DESC"
+    
+    PER_1953_revolution.t:0 "Iranian coup d'état?"
+    PER_1953_revolution.d:0 "Iranian coup d'état DESC"
+    PER_1979_revolution.t:0 "The Iranian Revolution?"
+    PER_1979_revolution.d:0 "The Iranian Revolution DESC"
+    
+    ARG_1955_revolution.t:0 "Revolución Libertadora?"
+    ARG_1955_revolution.d:0 "Revolución Libertadora DESC"
+    ARG_1966_revolution.t:0 "Argentine Revolution?"
+    ARG_1966_revolution.d:0 "Argentine Revolution? DESC"
+    ARG_1973_revolution.t:0 "Argentine coup d'état?"
+    ARG_1973_revolution.d:0 "Argentine coup d'état? DESC"
+    
+    SPA_1976_revolution.t:0 "Spanish Transition to Democracy?"
+    SPA_1976_revolution.d:0 "Spanish Transition to Democracy DESC"
+    
+    POR_1974_revolution.t:0 "The Carnation Revolution?"
+    POR_1974_revolution.d:0 "The Carnation Revolution DESC"
+    
+    GRE_1967_revolution.t:0 "The Regime of the Colonels?"
+    GRE_1967_revolution.d:0 "The Regime of the Colonels DESC"
+    
+    IRQ_1958_revolution.t:0 "The July Revolution?"
+    IRQ_1958_revolution.d:0 "The July Revolution DESC"
+    
+    LBY_1969_revolution.t:0 "The al-Fateh Revolution?"
+    LBY_1969_revolution.d:0 "The al-Fateh Revolution DESC"
+    
+    NYE_1962_revolution.t:0 "The North Yemen coup d'état?"
+    NYE_1962_revolution.d:0 "The North Yemen coup d'état DESC"
+    
+    CAR_1965_revolution.t:0 "Saint-Sylvestre coup d'état?"
+    CAR_1965_revolution.d:0 "Saint-Sylvestre coup d'état DESC"
+    CAR_1976_revolution.t:0 "The Central African Empire?"
+    CAR_1976_revolution.d:0 "The Central African Empire DESC"
+    
+    CNG_1965_revolution.t:0 "Congolese coup d'état?"
+    CNG_1965_revolution.d:0 "Congolese coup d'état DESC"
+    CNG_1971_revolution.t:0 "The Republic of Zaire?"
+    CNG_1971_revolution.d:0 "The Republic of Zaire DESC"
+    
+    ETH_1974_revolution.t:0 "Ethiopian coup d'état?"
+    ETH_1974_revolution.d:0 "Ethiopian coup d'état DESC"
+    
+    BUF_1983_revolution.t:0 "Coup d'état of Thomas Sankara?"
+    BUF_1983_revolution.d:0 "Coup d'état of Thomas Sankara DESC"
+    
+    MAD_1975_revolution.t:0 "Malagasy Socialist Revolution?"
+    MAD_1975_revolution.d:0 "Malagasy Socialist Revolution?"
+    
+    NIC_1979_revolution.t:0 "The Nicaraguan Revolution?"
+    NIC_1979_revolution.d:0 "The Nicaraguan Revolution DESC"
+    
+    BUR_1962_revolution.t:0 "Burmese coup d'état?"
+    BUR_1962_revolution.d:0 "Burmese coup d'état DESC"
+    BUR_1974_revolution.t:0 "Burmese Way to Socialism?"
+    BUR_1974_revolution.d:0 "Burmese Way to Socialism DESC"
+    
+    CAM_1970_revolution.t:0 "The Khmer Republic?"
+    CAM_1970_revolution.d:0 "The Khmer Republic DESC"
+    CAM_1975_revolution.t:0 "The Rise of the Khmer Rouge?"
+    CAM_1975_revolution.d:0 "The Rise of the Khmer Rouge DESC"
+    
+    IDO_1968_revolution.t:0 "The New Order?"
+    IDO_1968_revolution.t:0 "The New Order DESC"
+    
+    AFG_1973_revolution.t:0 "The Republic of Afghanistan?"
+    AFG_1973_revolution.d:0 "The Republic of Afghanistan DESC"
+    AFG_1978_revolution.t:0 "The Saur Revolution?"
+    AFG_1978_revolution.d:0 "The Saur Revolution DESC"
+    
+    LAO_1975_revolution.t:0 "The Rise of the Pathet Lao?"
+    LAO_1975_revolution.d:0 "The Rise of the Pathet Lao DESC"
+    
+    SOV_stalin_succession.t:0 "Stalin's Successor?"
+    SOV_stalin_succession.d:0 "Stalin's Successor DESC"
+    SOV_khrushchev.option:0 "Select Nikita Khrushchev"
+    SOV_beria.option:0 "Select Lavrentiy Beria"
+    SOV_zhukov.option:0 "Select Georgy Zhukov"
+    
+    historical_gov_changes.option.1:0 "Follow the historical path!"
     historical_gov_changes.option.2:0 "We shall seek a different future"
+    
+    stirrings_of_revolution:0 "Major Domestic Unrest"
     
     soviet_east_germany.indy.t:0 "Greater autonomy for East Germany?"
     soviet_east_germany.indy.d:0 "Greater autonomy for East Germany DESC"
@@ -784,8 +926,25 @@
     historical_colonial_wars.option.1:0 "Crush their insignificant rebellion!"
     historical_colonial_wars.option.2:0 "Let them be independent"
     
+    eritrean_war.t:0 "The Eritrean War of Independence"
+    eritrean_war.d:0 "The Eritrean War of Independence DESC"
+    congolese_war.t:0 "The Congo Crisis"
+    congolese_war.d:0 "The Congo Crisis DESC"
+    
+    historical_civil_wars.option.1:0 "Start the war!"
+    historical_civil_wars.option.2:0 "Take the peaceful option."
+    
+    historical_abolish_monarchy.t:0 "Abolish the [SCOPE.sCountry('monarch_home_country').GetAdjective] Monarchy?"
+    historical_abolish_monarchy.d:0 "[SCOPE.sCountry('abolishing_monarchy_country').GetNameNoFlag] is currently a monarchy with a [SCOPE.sCountry('monarch_home_country').GetAdjective] monarch. It was however during this period in history that the monarchy was replaced with a [SCOPE.sCountry('abolishing_monarchy_country').GetAdjective] President. Should we follow history and do the same?"
+    historical_abolish_monarchy.option.1:0 "Yes, the monarchy is a useless relic of the past."
+    historical_abolish_monarchy.option.2:0 "No, we love the monarchy!"
+    
     1950_recession.t:0 "The Post War Recession"
     1950_recession.d:0 "The 1949 recession was a brief economic downturn which began shortly after President Truman's "Fair Deal" economic reforms. It is said that the aftermath of the end of World War II was the main cause of the recession."
     1950_recession.f:0 "This is an in-game excuse for why the economy needs around 1 year to stabilise."
     
     historical_economy.1:0 "Interesting"
+    
+    irish_open_border.t:0 "Irish Open Border"
+    irish_open_border.d:0 "Due to historical reasons, the border between Southern Ireland and Northern Ireland have been left open. As a result, citizens from either parts of the island of Ireland can freely move from one part to another. This is represented in the game by putting [SCOPE.sCountry('irish_country').GetNameNoFlag] into the Customs Union of [SCOPE.sCountry('british_country').GetNameNoFlag]."
+    irish_open_border.f:0 "This event can be avoided by either enacting the isolationism law, becoming a non-democratic government type or no longer sharing a land border with [SCOPE.sCountry('british_country').GetNameNoFlag]."

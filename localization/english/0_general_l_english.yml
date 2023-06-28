@@ -2,6 +2,10 @@
  
     HUMAN_RIGHTS:0 "Politics"
     
+    ig_variant_bureaucrats:0 "[GetInterestGroupVariant('ig_bureaucrats',GetPlayer).GetNameWithCountryVariant]"
+    modifier_interest_group_ig_bureaucrats_pol_str_mult:2 "$ig_variant_bureaucrats$ [concept_political_strength]"
+    modifier_interest_group_ig_bureaucrats_pol_str_mult_desc:2 "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_bureaucrats$ [concept_interest_group]"
+    
     dp_un_peacekeeping:0 "UN Peacekeeping Mission"
     dp_unify_ARF:0 "Arab Unification"
     dp_leadership_ARF:0 "Arab Leadership"
@@ -10,6 +14,10 @@
     
     dp_annex_war_historical:0 "Annex Country"
     dp_annex_war_historical_tooltip:0 "Start an $dp_annex_war$ [concept_diplomatic_play]"
+    
+    dp_conquer_state_historical:0 "$war_goal_conquer_state_type_name$"
+    dp_conquer_state_historical_tooltip:1 "#header Start a $dp_conquer_state$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_conquer_state_desc$"
+    dp_conquer_state_historical_desc:0 "Sets the initiating [concept_war_goal] to force the targeted [concept_country] to cede a specific [concept_state] for you to take control of."
     
     dp_return_state_historical:0 "$war_goal_return_state_type_name$"
     dp_return_state_historical_tooltip:1 "#header Start a $dp_return_state$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_return_state_desc$"
@@ -46,6 +54,18 @@
     superstate_member:0 "Superstate Member"
     satellite:0 "Satellite State"
     trade_agreement:0 "Free Trade Agreement"
+    
+    conduct_hostile_espionage:0 "Conduct Hostile Espionage"
+    conduct_hostile_espionage_pact_desc:0 "Spies from [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] are conducting hostile covert operations against [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+    conduct_hostile_espionage_action_name:0 "Conduct Hostile Espionage"
+    conduct_hostile_espionage_action_break_name:0 "Stop Conducting Hostile Espionage"
+    conduct_hostile_espionage_action_propose_name:0 "Conduct Hostile Espionage"
+    conduct_hostile_espionage_desc:3 "We can set up a spy network run by our intelligence services in the target country so as to enable our country to conduct covert operations against them."
+    conduct_hostile_espionage_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjectiveNoFlag] Spy Network established in [TARGET_COUNTRY.GetName]"
+    conduct_hostile_espionage_action_notification_desc:2 "[INITIATOR_COUNTRY.GetName] has set up a spy network in [TARGET_COUNTRY.GetName] which allows them to conduct covert operations against [TARGET_COUNTRY.GetName]."
+    conduct_hostile_espionage_proposal_notification_name:0 "[INITIATOR_COUNTRY.GetAdjectiveNoFlag] Spy Network in [TARGET_COUNTRY.GetName]"
+    conduct_hostile_espionage_proposal_notification_desc:3 "[INITIATOR_COUNTRY.GetName] has set up a spy network in [TARGET_COUNTRY.GetName] which allows them to conduct covert operations against [TARGET_COUNTRY.GetName]." 
+    conduct_hostile_espionage_proposal_notification_effects_desc:0 "[INITIATOR_COUNTRY.GetName] will have a weekly chance of getting Espionage Events which permits it to interfere in our domestic politics and economy."
     
     nuclear_damage_1:0 "Very Low Nuclear Damage"
     nuclear_damage_2:0 "Low Nuclear Damage"

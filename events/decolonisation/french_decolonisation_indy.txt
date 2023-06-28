@@ -10,7 +10,7 @@ french_decolonisation_indy.1 = {
     desc = french_cameroon.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_cameroon.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -91,7 +91,7 @@ french_decolonisation_indy.1 = {
 		set_variable = french_cameroon_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -106,7 +106,7 @@ french_decolonisation_indy.2 = {
     desc = french_togo.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_togo.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -187,7 +187,7 @@ french_decolonisation_indy.2 = {
 		set_variable = french_togo_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -202,7 +202,7 @@ french_decolonisation_indy.3 = {
     desc = french_mali.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_mali.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -280,7 +280,7 @@ french_decolonisation_indy.3 = {
 		set_variable = french_mali_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -295,7 +295,7 @@ french_decolonisation_indy.4 = {
     desc = french_madagascar.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_madagascar.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -373,7 +373,7 @@ french_decolonisation_indy.4 = {
 		set_variable = french_madagascar_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -388,7 +388,7 @@ french_decolonisation_indy.5 = {
     desc = french_benin.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_benin.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -466,7 +466,7 @@ french_decolonisation_indy.5 = {
 		set_variable = french_benin_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -481,7 +481,7 @@ french_decolonisation_indy.6 = {
     desc = french_niger.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_niger.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -559,7 +559,7 @@ french_decolonisation_indy.6 = {
 		set_variable = french_niger_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -574,7 +574,7 @@ french_decolonisation_indy.7 = {
     desc = french_burkina_faso.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_burkina_faso.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -652,7 +652,7 @@ french_decolonisation_indy.7 = {
 		set_variable = french_burkina_faso_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -667,7 +667,7 @@ french_decolonisation_indy.8 = {
     desc = french_ivory_coast.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_ivory_coast.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -745,7 +745,7 @@ french_decolonisation_indy.8 = {
 		set_variable = french_ivory_coast_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -760,7 +760,7 @@ french_decolonisation_indy.9 = {
     desc = french_chad.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_chad.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -838,7 +838,7 @@ french_decolonisation_indy.9 = {
 		set_variable = french_chad_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -853,7 +853,7 @@ french_decolonisation_indy.10 = {
     desc = french_central_african_republic.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_central_african_republic.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -931,7 +931,7 @@ french_decolonisation_indy.10 = {
 		set_variable = french_central_african_republic_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -946,7 +946,7 @@ french_decolonisation_indy.11 = {
     desc = french_congo.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_congo.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1024,7 +1024,7 @@ french_decolonisation_indy.11 = {
 		set_variable = french_congo_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1039,7 +1039,7 @@ french_decolonisation_indy.12 = {
     desc = french_gabon.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_gabon.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1117,7 +1117,7 @@ french_decolonisation_indy.12 = {
 		set_variable = french_gabon_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1132,7 +1132,7 @@ french_decolonisation_indy.13 = {
     desc = french_senegal.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_senegal.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1210,7 +1210,7 @@ french_decolonisation_indy.13 = {
 		set_variable = french_senegal_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1225,7 +1225,7 @@ french_decolonisation_indy.14 = {
     desc = french_mauritania.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_mauritania.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1303,7 +1303,7 @@ french_decolonisation_indy.14 = {
 		set_variable = french_mauritania_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1318,7 +1318,7 @@ french_decolonisation_indy.15 = {
     desc = french_comoros.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_comoros.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1396,7 +1396,7 @@ french_decolonisation_indy.15 = {
 		set_variable = french_comoros_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1411,7 +1411,7 @@ french_decolonisation_indy.16 = {
     desc = french_djibouti.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_djibouti.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1489,7 +1489,7 @@ french_decolonisation_indy.16 = {
 		set_variable = french_djibouti_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1504,7 +1504,7 @@ french_decolonisation_indy.17 = {
     desc = french_morocco.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_morocco.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1540,6 +1540,13 @@ french_decolonisation_indy.17 = {
 		# Colony becomes independent
 		c:MOR = { 												# Change MOR of the colony ****
 			make_independent = yes
+		}
+		every_scope_state = {
+			limit = {
+		 		state_region = { is_homeland = cu:moroccan }	# Change homeland identity to match colony to be released ****
+				is_incorporated = no							# State is a colony
+		 	}
+			set_state_owner = c:MOR								# Change TAG to colony ****
 		}
 		
 		# Overlord create client state pact with colony
@@ -1582,7 +1589,7 @@ french_decolonisation_indy.17 = {
 		set_variable = french_morocco_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1597,7 +1604,7 @@ french_decolonisation_indy.18 = {
     desc = french_tunisia.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_tunisia.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1675,7 +1682,7 @@ french_decolonisation_indy.18 = {
 		set_variable = french_tunisia_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1692,7 +1699,7 @@ french_decolonisation_indy.19 = {
     desc = french_vietnam.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_vietnam.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1767,7 +1774,7 @@ french_decolonisation_indy.19 = {
 		set_variable = french_vietnam_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1782,7 +1789,7 @@ french_decolonisation_indy.20 = {
     desc = french_cambodia.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_cambodia.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1854,7 +1861,7 @@ french_decolonisation_indy.20 = {
 		set_variable = french_cambodia_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -1869,7 +1876,7 @@ french_decolonisation_indy.21 = {
     desc = french_laos.indy.d 					# Description of the event; ADD LOCALISATION
     #flavor = french_laos.indy.f 				# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_signed_contract.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -1941,7 +1948,7 @@ french_decolonisation_indy.21 = {
 		set_variable = french_laos_indy						# Change variable ****
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }

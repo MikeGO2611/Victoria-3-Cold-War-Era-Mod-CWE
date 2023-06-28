@@ -8,7 +8,7 @@ ARG_gov_changes.1 = {
     desc = ARG_1955_revolution.d 							# Description of the event; ADD LOCALISATION
     #flavor = ARG_1955_revolution.f 						# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -23,7 +23,7 @@ ARG_gov_changes.1 = {
 		game_date >= 1955.9.16									# START DATE: Date colony became self governing ****
 		game_date < 1960.9.16									# END DATE: All historical events must not fire 10 years after the START DATE ****
 		
-		is_a_presidential_regime = yes							# Correct gov types
+		is_a_republican_democracy = yes							# Correct gov types
 		is_sufficiently_independent = yes						# is_vassal = no		
 		is_at_war = no											# war = no
 		
@@ -95,7 +95,7 @@ ARG_gov_changes.1 = {
 		}
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -110,7 +110,7 @@ ARG_gov_changes.2 = {
     desc = ARG_1966_revolution.d 							# Description of the event; ADD LOCALISATION
     #flavor = ARG_1966_revolution.f 						# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -196,7 +196,7 @@ ARG_gov_changes.2 = {
 		}
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -211,7 +211,7 @@ ARG_gov_changes.3 = {
     desc = ARG_1973_revolution.d 							# Description of the event; ADD LOCALISATION
     #flavor = ARG_1973_revolution.f 						# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -297,7 +297,7 @@ ARG_gov_changes.3 = {
 		}
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
@@ -312,7 +312,7 @@ ARG_gov_changes.4 = {
     desc = ARG_1976_revolution.d 							# Description of the event; ADD LOCALISATION
     #flavor = ARG_1976_revolution.f 						# Flavor for event; ADD LOCALISATION, IF REQUIRED
 
-    event_image = { video = "gfx/event_pictures/asia_sepoy_mutiny.bk2" }
+    event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
 
     icon = "gfx/interface/icons/event_icons/event_portrait.dds" 	# Icon that shows on the map or the outliner
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear" 	# Sound effect if needed
@@ -400,7 +400,7 @@ ARG_gov_changes.4 = {
 		}
 		
 		ai_chance = { 
-			base = 10 
+			base = 10 modifier = { trigger = { has_global_variable = historical_railroading_active } add = -100 } 
 		}
 		
     }
